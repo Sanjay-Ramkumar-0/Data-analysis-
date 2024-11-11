@@ -6,6 +6,13 @@ import matplotlib.pyplot as plt
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
 df.columns=['col1_name','col2_name']
+# creating series
+certificates_earned = pd.Series(
+    [8, 2, 5, 6],
+    index=['Tom', 'Kris', 'Ahmad', 'Beau']
+)
+
+print(certificates_earned[certificates_earned > 5])
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
@@ -26,13 +33,7 @@ longest_streak = pd.Series([13, 11, 9, 7], index=names)
 certificates_earned['Longest streak'] = longest_streak
 
 print(certificates_earned)
-# creating series
-certificates_earned = pd.Series(
-    [8, 2, 5, 6],
-    index=['Tom', 'Kris', 'Ahmad', 'Beau']
-)
 
-print(certificates_earned[certificates_earned > 5])
 # changing index
 certificates_earned = pd.DataFrame({
     'Certificates': [8, 2, 5, 6],
