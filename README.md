@@ -9,7 +9,7 @@ df.columns=['col1_name','col2_name']
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
-# to know no of columns and rows in a dataframe
+# to know no of rows and columns in a dataframe
 df.shape()
 # adding new column in dataframe
 certificates_earned = pd.DataFrame({
