@@ -13,6 +13,13 @@ certificates_earned = pd.Series(
 )
 
 print(certificates_earned[certificates_earned > 5])
+# changing index
+certificates_earned = pd.DataFrame({
+    'Certificates': [8, 2, 5, 6],
+    'Time (in months)': [16, 5, 9, 12]
+})
+
+certificates_earned.index = ['Tom', 'Kris', 'Ahmad', 'Beau']
 # printing graph
 print(sales.plot(kind='scatter', x='total', y= 'index', figsize=(6,6))
 print(sales['total'].plot(kind='hist', bins = 100, figsize = (14,6))
