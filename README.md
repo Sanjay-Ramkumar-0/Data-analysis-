@@ -9,6 +9,8 @@ df.columns=['col1_name','col2_name']
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
+# to know no of columns and rows in a dataframe
+df.style()
 # adding new column in dataframe
 certificates_earned = pd.DataFrame({
     'Certificates': [8, 2, 5, 6],
