@@ -11,7 +11,7 @@ sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [
 sales['total'] = sales['amazon'] + sales ['flipkart']
 # to know no of rows and columns in a dataframe
 df.shape()
-# to print first n rows and last n rows
+# to print first n rows and last n rows, by default n is 5
 df.head(n)
 df.tail(n)
 # adding new column in dataframe
