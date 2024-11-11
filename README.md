@@ -6,6 +6,13 @@ import matplotlib.pyplot as plt
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
+# creating series
+certificates_earned = pd.Series(
+    [8, 2, 5, 6],
+    index=['Tom', 'Kris', 'Ahmad', 'Beau']
+)
+
+print(certificates_earned[certificates_earned > 5])
 # printing graph
 print(sales.plot(kind='scatter', x='total', y= 'index', figsize=(6,6))
 print(sales['total'].plot(kind='hist', bins = 100, figsize = (14,6))
