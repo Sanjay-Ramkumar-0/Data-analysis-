@@ -3,6 +3,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+# reading a csv file
+df = pd.read_csv('file_name.csv',header=None)
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
