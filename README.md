@@ -80,6 +80,27 @@ ambassadors.duplicated(keep='last'), if there are 2 same elements considers last
 ambassadors.duplicated(keep=False), if there are 2 same elements considers both as unique
 ambassadors.drop_duplicates()
 ambassadors.drop_duplicates(keep='last')ambassadors.drop_duplicates(keep=False)
+.drop_duplicates(subset=['Name'], keep='last')
+# working on columns using pd
+## spliting columns 
+df = pd.DataFrame({
+    'Data': [
+        '1987_M_US _1',
+        '1990?_M_UK_1',
+        '1992_F_US_2',
+        '1970?_M_   IT_1',
+        '1985_F_I  T_2'
+]})
+df['Data'].str.split('_')
+df = df['Data'].str.split('_', expand=True)
+df.columns = ['Year', 'Sex', 'Country', 'No Children']
+## regex in pandas
+contains takes a regex/pattern
+df['Country'].str.contains('U')
+## replacing
+df['Country'].str.replace(' ', '')
+or
+df['Country'].str.strip()
 # to know no of rows and columns in a dataframe
 df.shape()
 # to print first n rows and last n rows, by default n is 5
