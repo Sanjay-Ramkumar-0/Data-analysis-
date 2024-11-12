@@ -23,7 +23,11 @@ no.inf, numpy supports infinite
 np.isnan() and np.isinf() also take arrays as inputs, and return boolean arrays as results
 np.isfinite()
 df.dropna() will drop all the rows in which any null value is present
+df.dropna(axis=1) will drop all the columns in which any null value is present
 s.fillna(x) will fill NaN values with x in s dataframe.
+df.dropna(how='all'), df.dropna(how='any') which is default
+df.dropna(thresh=int) where int is any integers which acts as threshold value
+
 s.fillna(method='ffill'),s.fillna(method='bfill'), fill=forward fill, bill='beyond fill')
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
