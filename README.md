@@ -15,6 +15,13 @@ print(A[:, :2])
 a = np.arange(5)
 a + 20
 print(a)
+# numpy
+np.nan, nan means not a number
+a = np.array([1, 2, 3, np.nan, np.nan, 4])
+a.mean(), returns nan,as nan is like a virus everything it touches will become nan
+no.inf, numpy supports infinite
+np.isnan() and np.isinf() also take arrays as inputs, and return boolean arrays as results
+np.isfinite()
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
 df.columns=['col1_name','col2_name']
@@ -65,13 +72,7 @@ print(sales['total'].plot(kind='hist', bins = 100, figsize = (14,6))
 print(sales.iloc(:,0))
 print(sales.iloc([0,2],[0,2]))
 print(sales.loc(:,['amazon']))
-#numpy
-np.nan, nan means not a number
-a = np.array([1, 2, 3, np.nan, np.nan, 4])
-a.mean(), returns nan,as nan is like a virus everything it touches will become nan
-no.inf, numpy supports infinite
-np.isnan() and np.isinf() also take arrays as inputs, and return boolean arrays as results
-np.isfinite()
+
 
 
 
