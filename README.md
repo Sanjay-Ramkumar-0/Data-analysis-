@@ -9,6 +9,7 @@ a = np.array([1, 2, 3, np.nan, np.nan, 4])
 a.mean(), returns nan,as nan is like a virus everything it touches will become nan
 no.inf, numpy supports infinite
 np.isnan() and np.isinf() also take arrays as inputs, and return boolean arrays as results
+np.isfinite()
 # array using numpy
 A = np.array([
     ['a', 'b', 'c'],
