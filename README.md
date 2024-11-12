@@ -5,6 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 #numpy
 np.nan, nan means not a number
+a = np.array([1, 2, 3, np.nan, np.nan, 4])
+a.mean(), returns nan,as nan is like a virus everything it touches will become nan
+no.inf, numpy supports infinite
 # array using numpy
 A = np.array([
     ['a', 'b', 'c'],
