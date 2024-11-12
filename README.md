@@ -22,6 +22,7 @@ a.mean(), returns nan,as nan is like a virus everything it touches will become n
 no.inf, numpy supports infinite
 np.isnan() and np.isinf() also take arrays as inputs, and return boolean arrays as results
 np.isfinite()
+df.dropna() will drop all the rows in which any null value is present
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
 df.columns=['col1_name','col2_name']
