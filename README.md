@@ -75,9 +75,11 @@ ambassadors = pd.Series([
     'Klaus Scharioth '
 ])
 duplicated (that will tell you which values are duplicates) and drop_duplicates (which will just get rid of duplicates)
-ambassadors.duplicated()
-ambassadors.duplicated(keep='last')
-ambassadors.duplicated(keep=False)
+ambassadors.duplicated(), if there are 2 same elements considers first as unique
+ambassadors.duplicated(keep='last'), if there are 2 same elements considers last as unique
+ambassadors.duplicated(keep=False), if there are 2 same elements considers both as unique
+ambassadors.drop_duplicates()
+ambassadors.drop_duplicates(keep='last')ambassadors.drop_duplicates(keep=False)
 # to know no of rows and columns in a dataframe
 df.shape()
 # to print first n rows and last n rows, by default n is 5
