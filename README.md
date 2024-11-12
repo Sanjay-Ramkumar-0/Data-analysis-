@@ -3,6 +3,19 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+#numpy
+np.nan, nan means not a number
+# array using numpy
+A = np.array([
+    ['a', 'b', 'c'],
+    ['d', 'e', 'f'],
+    ['g', 'h', 'i']
+])
+
+print(A[:, :2])
+a = np.arange(5)
+a + 20
+print(a)
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
 df.columns=['col1_name','col2_name']
@@ -53,16 +66,6 @@ print(sales['total'].plot(kind='hist', bins = 100, figsize = (14,6))
 print(sales.iloc(:,0))
 print(sales.iloc([0,2],[0,2]))
 print(sales.loc(:,['amazon']))
-# array using numpy
-A = np.array([
-    ['a', 'b', 'c'],
-    ['d', 'e', 'f'],
-    ['g', 'h', 'i']
-])
 
-print(A[:, :2])
-a = np.arange(5)
-a + 20
-print(a)
 
 
