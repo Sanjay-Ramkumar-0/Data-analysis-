@@ -6,6 +6,11 @@ import matplotlib.pyplot as plt
 # reading a csv file
 df = pd.read_csv('file_name.csv',header=None)
 df.columns=['col1_name','col2_name']
+# pandas utility functions 
+pd.isnull(np.nan)
+pd.isnull(None)
+pd.isna(np.nan)
+pd.isna(None)
 # creating series
 certificates_earned = pd.Series(
     [8, 2, 5, 6],
