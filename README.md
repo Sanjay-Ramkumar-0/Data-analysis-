@@ -47,6 +47,37 @@ print(certificates_earned[certificates_earned > 5])
 # create dataframe
 sales = pd.DataFrame({'amazon':[100,200,300],'flipkart':[50,100,150]}, index = [2020,2021,2022])
 sales['total'] = sales['amazon'] + sales ['flipkart']
+# cleaning not null values in a dataframe
+df = pd.DataFrame({
+    'Sex': ['M', 'F', 'F', 'D', '?'],
+    'Age': [29, 30, 24, 290, 25],
+})
+df['Sex'].unique()
+df['Sex'].value_counts()
+df['Sex'].replace('D', 'F')
+df['Sex'].replace({'D': 'F', 'N': 'M'})
+# duplicates in dataframe
+ambassadors = pd.Series([
+    'France',
+    'United Kingdom',
+    'United Kingdom',
+    'Italy',
+    'Germany',
+    'Germany',
+    'Germany',
+], index=[
+    'Gérard Araud',
+    'Kim Darroch',
+    'Peter Westmacott',
+    'Armando Varricchio',
+    'Peter Wittig',
+    'Peter Ammon',
+    'Klaus Scharioth '
+])
+duplicated (that will tell you which values are duplicates) and drop_duplicates (which will just get rid of duplicates)
+ambassadors.duplicated()
+ambassadors.duplicated(keep='last')
+ambassadors.duplicated(keep=False)
 # to know no of rows and columns in a dataframe
 df.shape()
 # to print first n rows and last n rows, by default n is 5
