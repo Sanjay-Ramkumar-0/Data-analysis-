@@ -20,6 +20,18 @@ a = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 print(np.full_like(a, 100))
 [[100 100 100 100 100]
 [100 100 100 100 100]]
+# to get data from a file with using numpy
+file_data = np.genfromtext('data.txt',delimiter=',')
+file_data.astype('int32'), to change the datatype
+## boolean masking
+file_data>50
+np.any(file_data>50, axis=0)
+np.all(file_data>50, axis=0)
+## indexing 
+file_data[file_data>50]
+a = np.array([1,2,3,4,5,6,7,8,9])
+a[[1,2,4]]
+
 # numpy
 np.nan, nan means not a number
 a = np.array([1, 2, 3, np.nan, np.nan, 4])
