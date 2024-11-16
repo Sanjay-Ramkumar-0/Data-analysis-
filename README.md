@@ -144,6 +144,10 @@ df['Country'].str.contains('U')
 df['Country'].str.replace(' ', '')
 or
 df['Country'].str.strip()
+## map and apply
+review_points_mean = reviews.points.mean()
+reviews.points.map(lambda p: p - review_points_mean)
+
 # to know no of rows and columns in a dataframe
 df.shape()
 # to print first n rows and last n rows, by default n is 5
@@ -169,6 +173,7 @@ certificates_earned = pd.DataFrame({
 })
 
 certificates_earned.index = ['Tom', 'Kris', 'Ahmad', 'Beau']
+
 # printing graph
 print(sales.plot(kind='scatter', x='total', y= 'index', figsize=(6,6))
 print(sales['total'].plot(kind='hist', bins = 100, figsize = (14,6))
