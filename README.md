@@ -99,6 +99,21 @@ ambassadors.drop_duplicates()
 ambassadors.drop_duplicates(keep='last')ambassadors.drop_duplicates(keep=False)
 .drop_duplicates(subset=['Name'], keep='last')
 # working on columns using pd
+## conditional selection 
+reviews.country == 'Italy
+o/p:
+0          True
+1         False
+          ...  
+129969    False
+129970    False
+Name: country, Length: 129971, dtype: bool
+
+reviews.loc[reviews.country == 'Italy']
+reviews.loc[(reviews.country == 'Italy') & (reviews.points >= 90)]
+reviews.loc[(reviews.country == 'Italy') | (reviews.points >= 90)] , or operator
+reviews.loc[reviews.country.isin(['Italy', 'France'])]
+reviews.loc[reviews.price.notnull()]
 ## spliting columns 
 df = pd.DataFrame({
     'Data': [
