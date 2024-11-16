@@ -124,6 +124,7 @@ sort_values() defaults to an ascending sort, where the lowest values go first
 countries_reviewed.sort_values(by='len')
 countries_reviewed.sort_values(by='len', ascending=False)
 countries_reviewed.sort_index()
+countries_reviewed.sort_values(by=['country', 'len']),you can sort by more than one column at a time:
 ## spliting columns 
 df = pd.DataFrame({
     'Data': [
