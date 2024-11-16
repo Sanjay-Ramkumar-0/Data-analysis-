@@ -114,6 +114,16 @@ reviews.loc[(reviews.country == 'Italy') & (reviews.points >= 90)]
 reviews.loc[(reviews.country == 'Italy') | (reviews.points >= 90)] , or operator
 reviews.loc[reviews.country.isin(['Italy', 'France'])]
 reviews.loc[reviews.price.notnull()]
+# groupby() 
+reviews.groupby('points').points.count()
+reviews.groupby('points').price.min()
+agg(), which lets you run a bunch of different functions on your DataFrame simultaneously
+reviews.groupby(['country']).price.agg([len, min, max])
+# sort_values()
+sort_values() defaults to an ascending sort, where the lowest values go first
+countries_reviewed.sort_values(by='len')
+countries_reviewed.sort_values(by='len', ascending=False)
+countries_reviewed.sort_index()
 ## spliting columns 
 df = pd.DataFrame({
     'Data': [
